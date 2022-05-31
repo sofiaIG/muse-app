@@ -1,6 +1,4 @@
-import { paste } from "@testing-library/user-event/dist/paste";
 import React from "react";
-import Post from "./Post";
 import './PostItems.css';
 
 const PostItems=({post})=>{
