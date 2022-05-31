@@ -5,8 +5,8 @@ const Post =({posts})=>{
 
     console.log(posts)
     
-    const postItems = posts.map((post)=>{
-        return <PostItems post = {post}/>
+    const postItems = posts.map((post, key)=>{
+        return <PostItems post = {post} key = {key}/>
     })
 
     return(
