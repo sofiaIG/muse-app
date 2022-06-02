@@ -1,11 +1,11 @@
 import './components/LogIn.css';
 import React, {useState, useEffect} from 'react';
-// import { BrowserRouter, HashRouter, NavLink, Route, Routes } from 'react-router-dom';
-// import Post from './components/Post';
-// import Profile from './components/Profile';
+import Home from './components/Home';
+
 
 function App() {
   const [posts, setPosts] = useState("")
+  const [user, setUser] = useState("")
   const[userAuth, setUserAuth] = useState("")
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -13,7 +13,7 @@ function App() {
   useEffect(()=>{
     getPosts();
     getUserAuth();
-    console.log(posts)
+    getUser()
   }, [])
 
   const getPosts = function(){
@@ -25,7 +25,13 @@ function App() {
   const getUserAuth =function(){
     fetch("http://localhost:8080/userAuth")
     .then(res =>res.json())
-    .then(user =>setUserAuth(user))
+    .then(userAu =>setUserAuth(userAu))
+  }
+
+  const getUser = function(){
+    fetch("http://localhost:8080/users")
+    .then(res =>res.json())
+    .then(user => setUser(user))
   }
 
   const errors = {
@@ -43,10 +49,19 @@ function App() {
     event.preventDefault();
   
     var { uname, pass } = document.forms[0];
+
+
   
     // Find user login info
     const username = userAuth[0].email;
     const password = userAuth[0].password;
+  
+    console.log(username);
+    console.log("DB PASSWORD   " + password);
+    console.log(pass.value);
+    console.log(userAuth);
+    console.log(user)
+
   
     // Compare user info
     if (username && password) {
@@ -61,6 +76,8 @@ function App() {
       setErrorMessages({ name: "uname", message: errors.uname });
     }
   };
+
+
 
   const renderForm = (
     <div className="form">
@@ -84,15 +101,13 @@ function App() {
 
 
 
-  // const printPosts = posts.map((post) =>{
-  //   return post;
-  // })
+
   return (
  
     <div className="app">
       <div className="login-form">
-        <div className="title">Sign In</div>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+        <div className="title">Muse</div>
+        {isSubmitted ? <Home posts = {posts} user = {user} /> : renderForm}
       </div>
     </div>
   

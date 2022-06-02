@@ -1,6 +1,7 @@
 import React from "react";
 import PostItems from "./PostItems";
 
+
 const Post =({posts})=>{
 
     console.log(posts)
