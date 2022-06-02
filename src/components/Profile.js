@@ -1,12 +1,9 @@
 import React from "react";
+import UserItem from "./UserItem";
 
 const Profile=({user})=>{
 
-    const postItems = posts.map((post, key)=>{
-        return <PostItems post = {post} key = {key}/>
-    })
-
-    const constUserItems = user.map((element, key)=>{
+    const userItems = user.map((element, key)=>{
          return <UserItem Item user = {element} key = {key}/>
     })
 
@@ -14,6 +11,9 @@ const Profile=({user})=>{
 
     return(
         <>
+        <ul>
+            {userItems}
+        </ul>
         
         </>
     )
