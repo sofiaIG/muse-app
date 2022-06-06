@@ -1,0 +1,36 @@
+.header{
+    display: flex;
+    background-color: var(--primary);
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.museLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.museLogo strong {
+    font-family: "rounded-elegance";
+    font-weight: 400;
+    font-size: 2rem;
+    color: white;
+}
+
+.museLogo__lines {
+    display: inline-flex;
+    flex-direction: row;
+    width: 54px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    color: white
+}
+
+.museLogo__line {
+    width: 5px;
+    background-color: white;
+    border-radius: 4px;
+    
+}

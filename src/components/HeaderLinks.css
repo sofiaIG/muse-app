@@ -1,0 +1,22 @@
+.links{
+    display: flex;
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    
+    
+    
+}
+
+.link{
+    padding-right: 3rem;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.logout{
+    border-radius: 0.5rem;
+    background-color: white;
+    border: none;
+}
