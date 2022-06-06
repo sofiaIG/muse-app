@@ -16,17 +16,17 @@ const HeaderLinks=()=>{
     return(
         isLoggedIn ?
     <ul className="links">
-          <li><NavLink className={"link"} to="posts" children = "posts"/></li>
-          <li><NavLink className={"link"} to= "profile" children = "profile"/></li>
-          <li><NavLink className={"link"} to = "createPost" children = "createPost"/></li>
+          <li><NavLink className={"link"} to="posts" children = "Posts"/></li>
+          <li><NavLink className={"link"} to= "profile" children = "Profile"/></li>
+          <li><NavLink className={"link"} to = "createPost" children = "Create Post"/></li>
           <button className={"logout"} onClick={handleClick}>Log out</button>
         </ul>
-        :       <ul>
+        :       <ul className="links">
         <li>
-          <NavLink to="logIn" children="logIn" />
+          <NavLink className={"link"} to="logIn" children="Login" />
         </li>
         <li>
-          <NavLink to="signUp" children="signUp" />
+          <NavLink className = {"link"} to="signUp" children="Sign Up" />
         </li>
       </ul>
     )

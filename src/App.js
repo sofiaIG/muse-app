@@ -9,6 +9,7 @@ import LogIn from "./components/LogIn";
 import Post from "./components/Post";
 import Profile from "./components/Profile";
 import CreatePost from "./components/CreatePost";
+import "./components/HeaderLinks.css"
 
 const App = () => {
   const [userId] = useAtom(userIdAtom);

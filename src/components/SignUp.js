@@ -34,7 +34,7 @@ const SignUp = () => {
   return (
     <div className="app">
       <div className="login-form">
-        <div className="title">Muse</div>
+        <div className="title">Sign Up</div>
         <div className="form">
           <form onSubmit={handleSubmit}>
             <div className="input-container">

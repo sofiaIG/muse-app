@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import PostItems from "./PostItems";
 
-
 const Post =()=>{
 
     const [posts, setPosts] = useState([])

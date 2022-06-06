@@ -4,7 +4,7 @@ import './PostItems.css';
 const PostItems=({post})=>{
 
     return(
-        <div className="container">
+        <div className="box">
             <p className="title">{post.title}</p>
             <p>{post.text}</p>
             <p>by {post.user.userName}</p>

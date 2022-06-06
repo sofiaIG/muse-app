@@ -1,7 +1,18 @@
-.container {
-    flex-direction: row;
+.post {
+    display: flex;
+    justify-items: flex;
+    flex-direction: column;
+    margin: 2%;
+    /* display: none; */
   }
 
 .title {
     font-size: large;
+}
+
+.box {
+  border: 2px solid var(--primary);
+  border-radius: .5em;
+  padding: 20px 40px;
+  margin: inherit;
 }
