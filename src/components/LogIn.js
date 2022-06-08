@@ -7,7 +7,6 @@ const LogIn = () => {
   const [status, setStatus] = useState("initial");
   const [_, setUserId] = useAtom(userIdAtom);
 
-
   const handleSubmit = (e) => {
     setStatus("submitting");
     e.preventDefault();
@@ -22,7 +21,19 @@ const LogIn = () => {
     })
       .then((res) => res.json())
       .then((result) => {
+        if (typeof result === "number") {
           setUserId(result);
+        } else {
+          alert(
+            "The password you have entered isn't correct or the user doesn't exist."
+          );
+        }
+      })
+
+      .catch(() => {
+        alert(
+          "The password you have entered isn't correct or the user doesn't exist."
+        );
       });
   };
 

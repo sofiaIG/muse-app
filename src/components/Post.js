@@ -15,11 +15,13 @@ const Post =()=>{
       }
 
     
-    const postItems = posts.map((post, key)=>{
-        return <PostItems post = {post} key = {key}/>
+    const postItems = (posts || []).map((post, key)=>{
+        return <PostItems post = {post} key = {key} posts = {posts}/>
     })
 
     return(
+
+        
     <div>
         <ul>
             {postItems}

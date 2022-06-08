@@ -1,11 +1,12 @@
 import "./Header.css";
 import React from "react";
 import HeaderLinks from "./HeaderLinks";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="header">
-      <span className="museLogo">
+      <NavLink to="" className="museLogo link">
           <span className="museLogo__lines">
               <span className="museLogo__line "  style={{height: "30%"}} />
               <span className="museLogo__line "  style={{height: "55%"}} />
@@ -14,7 +15,7 @@ const Header = () => {
               <span className="museLogo__line "  style={{height: "50%"}} />
           </span>
     <strong>muse</strong>
-    </span>
+    </NavLink>
     <HeaderLinks/>
     </header>
   );

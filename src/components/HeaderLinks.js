@@ -17,7 +17,7 @@ const HeaderLinks=()=>{
         isLoggedIn ?
     <ul className="links">
           <li><NavLink className={"link"} to="posts" children = "Posts"/></li>
-          <li><NavLink className={"link"} to= "profile" children = "Profile"/></li>
+          <li><NavLink className={"link"} to= {`profile/${userId}`} children = "Profile"/></li>
           <li><NavLink className={"link"} to = "createPost" children = "Create Post"/></li>
           <button className={"logout"} onClick={handleClick}>Log out</button>
         </ul>

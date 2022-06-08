@@ -4,6 +4,7 @@
     padding: 1rem;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 .museLogo {
     display: flex;
@@ -15,7 +16,11 @@
     font-family: "rounded-elegance";
     font-weight: 400;
     font-size: 2rem;
+}
+
+.link{
     color: white;
+    text-decoration: none;
 }
 
 .museLogo__lines {

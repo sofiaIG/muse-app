@@ -1,16 +1,14 @@
 import React, {useEffect, useState} from "react";
 import UserItem from "./UserItem";
-import { NavLink } from "react-router-dom";
-import { userIdAtom } from "../State/State";
-import { useAtom } from "jotai";
+import { useParams } from "react-router-dom";
 
 
 const Profile=()=>{
-    const [userId] = useAtom(userIdAtom);
     const [user, setUser] = useState(null)
+    const params = useParams();
     useEffect(()=>{
-        getUser(userId)
-}, [])
+        getUser(params.userId)
+}, [params.userId])
     
       const getUser = function(userId){
         fetch(`http://localhost:8080/users/${userId}`)
@@ -21,7 +19,6 @@ const Profile=()=>{
 
     return(
     <div>
-        <NavLink to="createPost" children ="createPost"/>
         <ul>
             {user&&<UserItem user = {user}/>}
         </ul>
