@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { useAtom } from "jotai";
-import { userIdAtom } from "./State/State";
+import { userIdAtom } from "./state/State";
 import Header from "./components/Header";
 
 import SignUp from "./components/SignUp";

@@ -1,7 +1,7 @@
 import "./LogIn.css";
 import React, { useState } from "react";
 import { useAtom } from "jotai";
-import { userIdAtom } from "../State/State";
+import { userIdAtom } from "../state/State";
 
 const SignUp = () => {
     const [status, setStatus] = useState("initial");

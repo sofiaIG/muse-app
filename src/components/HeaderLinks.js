@@ -1,7 +1,7 @@
 import React from "react";
 import { useAtom } from "jotai";
 import { NavLink } from "react-router-dom";
-import { userIdAtom } from "../State/State";
+import { userIdAtom } from "../state/State";
 import "./HeaderLinks.css"
 
 const HeaderLinks=()=>{

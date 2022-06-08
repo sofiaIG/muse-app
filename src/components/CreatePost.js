@@ -1,6 +1,6 @@
 import { useAtom } from "jotai";
 import React from "react";
-import { userIdAtom } from '../State/State';
+import { userIdAtom } from '../state/State';
 
 const CreatePost = ()=>{
 

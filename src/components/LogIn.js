@@ -1,41 +1,29 @@
 import "./LogIn.css";
 import React, { useState } from "react";
 import { useAtom } from "jotai";
-import { userIdAtom } from "../State/State";
+import { userIdAtom } from "../state/State";
 
 const LogIn = () => {
   const [status, setStatus] = useState("initial");
   const [_, setUserId] = useAtom(userIdAtom);
 
-  const handleSubmit = (e) => {
-    setStatus("submitting");
-    e.preventDefault();
-    const logInBody = {
-      email: e.target.email.value,
-      password: e.target.password.value,
-    };
-    fetch("http://localhost:8080/login", {
-      method: "POST",
-      body: JSON.stringify(logInBody),
-      headers: { "content-type": "application/json" },
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        if (typeof result === "number") {
-          setUserId(result);
-        } else {
-          alert(
-            "The password you have entered isn't correct or the user doesn't exist."
-          );
-        }
-      })
 
-      .catch(() => {
-        alert(
-          "The password you have entered isn't correct or the user doesn't exist."
-        );
-      });
+const handleSubmit = (e) => {
+  setStatus("submitting");
+  e.preventDefault();
+  const logInBody = {
+    email: e.target.email.value,
+    password: e.target.password.value,
   };
+  fetch("http://localhost:8080/login", {
+    method: "POST",
+    body: JSON.stringify(logInBody),
+    headers: { "content-type": "application/json" },
+  })
+    .then((res) => res.json())
+    .then((result) => {setUserId(result)
+    });
+  }
 
   return (
     <div className="app">

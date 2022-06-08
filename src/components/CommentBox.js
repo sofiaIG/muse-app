@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Navigate } from "react-router-dom";
 import { useAtom } from "jotai";
-import { userIdAtom } from "../State/State";
-import { postIdAtom } from "../State/State";
+import { userIdAtom } from "../state/State";
+import "./CommentBox.css";
 
 
 const CommentBox =({postId})=>{
@@ -38,10 +38,10 @@ const CommentBox =({postId})=>{
       };
 
     const commentItems = comments.map((comment=>
-      <div key={comment.id}>
-      
-      {comment.content}
-      <NavLink to={"/profile/"+comment.user.id }children ={comment.user.userName} />
+      <div className="box" key={comment.id}>
+        <NavLink to={"/profile/"+comment.user.id }children ={comment.user.userName} />
+        <br></br>
+        {comment.content}
       </div>))
 
       
@@ -50,21 +50,9 @@ const CommentBox =({postId})=>{
         <>
         {commentItems}
         <form onSubmit={handleSubmit}>
-          <input required={true} type= "text" name ="content"/>
-          <button type="submit">Comment</button>
+          <input required={true}  id = "1" type= "text" name ="content"/>
+          <button className = "comment" type="submit">Comment</button>
         </form>
-        {/* <Navigate to = "/post"> </Navigate>
-        <form onSubmit={handleSubmit}>
-        <div className="box">
-            <p className="title">{postSelected.title}</p>
-            <p>{postSelected.text}</p>
-            <p>by {postSelected.user.userName}</p>
-            <div className="comment-container">
-              <input type="text" name="content" required />
-            </div>
-
-        </div>
-        </form> */}
         </>
         
     )

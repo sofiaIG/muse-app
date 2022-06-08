@@ -1,0 +1,56 @@
+.box {
+    border: 2px solid var(--primary);
+    border-radius: .5em;
+    padding: 20px 40px;
+    margin: inherit;
+    display: flex;
+    justify-items: flex;
+    flex-direction: column;
+    margin: 2%;
+    text-align: left;
+  }
+
+  .comment {
+    display: flex;
+    justify-items: flex;
+    flex-direction: column;
+    margin: 2%;
+  }
+
+  .button{
+    background-color: white;
+    border: 1px solid var(--primary);
+    border-radius: .5em;
+    padding: 20px 40px;
+    margin: inherit;
+    box-shadow: 3px 2px rgba(226, 105, 166, 0.5);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+  }
+
+  .comment{
+    background-color: white;
+    border: 1px solid var(--primary);
+    border-radius: .5em;
+    padding: 20px 40px;
+    margin: inherit;
+    box-shadow: 3px 2px rgba(226, 105, 166, 0.5);
+    width: 100px;
+    height: 5px;
+    /* text-align: center; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    box-sizing : content-box;
+    top: 50px;
+    left:50%;
+    /* position:absolute; */
+  }
+
+  input[type=text] {
+    width: 800px;
+    height: 100px;
+    text-align: initial;
+    float:left ;
+    top: 100px;
+ }

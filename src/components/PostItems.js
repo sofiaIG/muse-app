@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import CommentBox from "./CommentBox";
 import { useAtom } from "jotai";
-import { postIdAtom, userIdAtom } from "../State/State";
+import {userIdAtom } from "../state/State";
+import "./CommentBox.css"
 
 
 const PostItems=({post})=>{
@@ -22,8 +23,8 @@ const PostItems=({post})=>{
         <div className="box">
             <p>{post.title}</p>
             <p>{post.text}</p>
-            <p>by <NavLink to={`/profile/${post.user.id}`}>{post.user.userName}</NavLink></p>
-            <button onClick={handleClick}>Comments</button>
+            <p><NavLink to={`/profile/${post.user.id}`}>{post.user.userName}</NavLink></p>
+            <button className="button" onClick={handleClick}>Comments</button>
 
         {isViewingComments && <CommentBox postId={post.id} />}
         </div>
