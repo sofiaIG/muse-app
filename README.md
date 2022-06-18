@@ -14,7 +14,7 @@ This repository is the front end of this application.
 
 ## Setup
 
-To setup the app you will need to run the following commands: npm i and npm start
+To run the UI environment make sure to set up the back-end first. Please refere to link [Muse back-end](https://github.com/sofiaIG/Muse2). Then to setup the app you will need to run the following commands: npm i and npm start.
 
 ## Technologies
 
