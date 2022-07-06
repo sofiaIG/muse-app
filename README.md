@@ -18,7 +18,7 @@ To run the UI environment make sure to set up the back-end first. Please refere 
 
 ## Technologies
 
-* Javascipt
+* Javascript
 * React
 
 
